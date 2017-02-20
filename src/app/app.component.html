@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-10">
+            <h1>Hello World!</h1>
+            <hr>
+            <a [routerLink]="['']" [queryParams]="{analytics: 400}" routerLinkActive="active">Home</a>
+            <!-- <a [routerLink]="['']" [queryParams]="{analytics: 400}">Home</a> -->
+            <input type="text" #id (input)="0">
+            <a [routerLink]="['user', id.value]" routerLinkActive="active">User</a>
+            <!-- <a [routerLink]="['user', id.value]" routerLinkActive="active" [preserveQueryParams]="true">User</a> -->
+            <hr>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
